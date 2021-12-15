@@ -1,0 +1,10 @@
+.appraise-img {
+  height: 450px;
+  width: 207px;
+}
+
+@media screen and (max-width: 600px) {
+  .image-center-sx {
+    text-align: -webkit-center;
+  }
+}

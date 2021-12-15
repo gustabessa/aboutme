@@ -1,0 +1,29 @@
+.avatar-container {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px !important;
+  background-image: url('../../assets/profilepic.jpg');
+  background-size: cover;
+  border: 1px solid;
+}
+
+.code-pattern {
+  background: url('../../assets/codepattern.jpg') ;
+  background-size: 400px !important;
+  background-repeat: repeat !important;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .image-center-sx {
+    text-align: -webkit-center;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .avatar-container {
+    width: 90%;
+    background-position: center;
+  }
+}
