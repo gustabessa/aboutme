@@ -1,6 +1,7 @@
-import { Paper, Grow, Zoom, Grid, Typography, Avatar, Tooltip } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { Paper, Grow, Grid, Typography } from '@mui/material';
+import { grey, yellow } from '@mui/material/colors';
 import { useState } from 'react';
+import TechnologyIcon from '../technology-icon/TechnologyIcon';
 import './project-card.css'
 
 function ProjectCard({ project }) {
@@ -24,16 +25,23 @@ function ProjectCard({ project }) {
     <Paper sx={containerSx}>
       <Grow in {...{ timeout: 500 }}>
         <Paper sx={rootSx}>
+          { project.disclaimer &&
+            <Paper sx={disclaimerSx}>
+              <Typography sx={{fontWeight: 600}}>
+                { `${project.disclaimer.text} ` }
+                <a href={project.disclaimer.url} target="_blank" rel="noreferrer">{ project.disclaimer.url }</a>
+              </Typography>
+            </Paper>
+          }
           <Grid container spacing={2}>
-            <Grid className="image-center-sx" item xs={12} sm="auto">
               { project.images.map(
                 (image, index) => {
-                  const imagePath = require(`../../assets/${image}`);
-                  // TODO -> adicionar mecanismo de classe dinamica para comportar todos os projetos
-                  return (<img className="appraise-img" key={index} src={imagePath} alt="" />)
-                })
+                  const imagePath = require(`../../assets/${image.name}`);
+                  return (<Grid className="image-center-sx" key={index} item xs={image.xs} sm={image.sm} md={image.md} lg={image.lg}>
+                    <img className={image.className} src={imagePath} alt="" />
+                    </Grid>)
+                  })
               }
-            </Grid>
             <Grid item xs={12} sm>
               <Paper sx={descriptionSx}>
                 <Typography sx={sobreSx}>
@@ -41,26 +49,9 @@ function ProjectCard({ project }) {
                 </Typography>
               </Paper>
               <Paper sx={technologiesSx}>
-                {/* TODO ->  Fazer essa lista de imagens manualmente sem o componente */}
-                {project.technologies.map((technology, index) => {
-                  const imagePath = require(`../../assets/${technology.image}`);
-                  return (
-                    <Tooltip
-                      componentsProps={tooltipComponentProps}
-                      TransitionComponent={Zoom}
-                      key={index} title={technology.name}
-                      open={technology.name === tooltip} arrow>
-                      <Avatar 
-                        onClick={() => handleTooltipOpen(technology.name)} 
-                        sx={avatarSx}>
-                        <img
-                          className="technology-item"
-                          src={`${imagePath}`}
-                          alt={technology.name}
-                        />
-                      </Avatar>
-                    </Tooltip>
-                )})}
+                {project.technologies.map((technology, index) => 
+                  (<TechnologyIcon key={index} technology={technology} handleTooltipOpen={handleTooltipOpen} open={technology.name === tooltip} />)
+                )}
               </Paper>
             </Grid>
           </Grid>
@@ -75,6 +66,11 @@ export default ProjectCard;
 const rootSx = {
   background: grey[700],
   padding: '10px'
+}
+const disclaimerSx = {
+  background: yellow[800],
+  padding: '10px',
+  marginBottom: '10px'
 }
 const containerSx = {
   padding: '10px',
@@ -92,22 +88,4 @@ const technologiesSx = {
 const sobreSx = { 
   color: '#fff',
   fontSize: '16px'
-}
-const avatarSx = {
-  cursor: 'pointer',
-  display: 'inline',
-  marginRight: '5px',
-  backgroundColor: 'rgb(151 151 151 / 31%)'
-}
-const tooltipComponentProps = {
-  tooltip: {
-    sx: {
-      backgroundColor: grey[900]
-    }
-  },
-  arrow: {
-    sx: {
-      color: grey[900]
-    }
-  },
 }

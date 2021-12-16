@@ -5,11 +5,27 @@ const technologies = {
   },
   java: {
     name: 'Java',
-    image: ''
+    image: 'java.png'
+  },
+  spring: {
+    name: 'Spring',
+    image: 'spring.png'
+  },
+  springboot: {
+    name: 'Spring Boot',
+    image: 'springboot.png'
   },
   vuejs: {
     name: 'Vue.js',
-    image: ''
+    image: 'vue.png'
+  },
+  angular: {
+    name: 'Angular (4/5)',
+    image: 'angular.png'
+  },
+  react: {
+    name: 'React',
+    image: 'react.png'
   },
   reactnative: {
     name: 'ReactNative',
@@ -17,12 +33,43 @@ const technologies = {
   },
   postgres: {
     name: 'PostgreSQL',
-    image: ''
+    image: 'postgre.png'
   },
   sequelize: {
     name: 'Sequelize',
     image: 'sequelize.png'
   },
+  quasar: {
+    name: 'Quasar',
+    image: 'quasar.png'
+  },
+  git: {
+    name: 'Git',
+    image: 'git.png'
+  }
 };
+
+technologies.backend = [
+  technologies.java,
+  technologies.spring,
+  technologies.springboot,
+  technologies.node,
+  technologies.sequelize,
+  technologies.postgres
+];
+
+technologies.frontend = [
+  technologies.vuejs,
+  technologies.react,
+  technologies.angular
+];
+
+technologies.mobile = [
+  technologies.reactnative
+];
+
+technologies.other = [
+  technologies.git
+];
 
 export default technologies;
