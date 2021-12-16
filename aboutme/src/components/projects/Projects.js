@@ -43,7 +43,8 @@ function Projects() {
 export default Projects;
 
 const rootSx = {
-  background: grey[800]
+  background: grey[800],
+  marginTop: '10px'
 }
 const tabSx = {
   fontWeight: 600,

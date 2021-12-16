@@ -1,8 +1,24 @@
-import { Paper, Grow, Grid, Typography, ImageList, ImageListItem } from '@mui/material';
+import { Paper, Grow, Zoom, Grid, Typography, Avatar, Tooltip } from '@mui/material';
 import { grey } from '@mui/material/colors';
+import { useState } from 'react';
 import './project-card.css'
 
 function ProjectCard({ project }) {
+  const [tooltip, setTooltip] = useState(null);
+  const [tooltipTimeout, setTooltipTimeout] = useState(null);
+
+  function handleTooltipOpen (name) {
+    clearTimeout(tooltipTimeout);
+    if (name === tooltip) {
+      setTooltip(null);
+    } else {
+      setTooltip(name);
+      const timeout = setTimeout(() => {
+        setTooltip(null);
+      }, 2000);
+      setTooltipTimeout(timeout);
+    }
+  }
 
   return (
     <Paper sx={containerSx}>
@@ -25,22 +41,26 @@ function ProjectCard({ project }) {
                 </Typography>
               </Paper>
               <Paper sx={technologiesSx}>
-              {/* TODO ->  Fazer essa lista de imagens manualmente sem o componente */}
-              <ImageList cols={5} rowHeight={64}>
+                {/* TODO ->  Fazer essa lista de imagens manualmente sem o componente */}
                 {project.technologies.map((technology, index) => {
-                const imagePath = require(`../../assets/${technology.image}`);
-                return (
-                  <ImageListItem key={index}>
-                    <img
-                      className="technology-item"
-                      src={`${imagePath}`}
-                      srcSet={`${imagePath}`}
-                      alt={technology.name}
-                      loading="lazy"
-                    />
-                  </ImageListItem>
+                  const imagePath = require(`../../assets/${technology.image}`);
+                  return (
+                    <Tooltip
+                      componentsProps={tooltipComponentProps}
+                      TransitionComponent={Zoom}
+                      key={index} title={technology.name}
+                      open={technology.name === tooltip} arrow>
+                      <Avatar 
+                        onClick={() => handleTooltipOpen(technology.name)} 
+                        sx={avatarSx}>
+                        <img
+                          className="technology-item"
+                          src={`${imagePath}`}
+                          alt={technology.name}
+                        />
+                      </Avatar>
+                    </Tooltip>
                 )})}
-              </ImageList>
               </Paper>
             </Grid>
           </Grid>
@@ -72,4 +92,22 @@ const technologiesSx = {
 const sobreSx = { 
   color: '#fff',
   fontSize: '16px'
+}
+const avatarSx = {
+  cursor: 'pointer',
+  display: 'inline',
+  marginRight: '5px',
+  backgroundColor: 'rgb(151 151 151 / 31%)'
+}
+const tooltipComponentProps = {
+  tooltip: {
+    sx: {
+      backgroundColor: grey[900]
+    }
+  },
+  arrow: {
+    sx: {
+      color: grey[900]
+    }
+  },
 }

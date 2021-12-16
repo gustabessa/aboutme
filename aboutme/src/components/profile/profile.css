@@ -6,6 +6,36 @@
   background-size: cover;
   border: 1px solid;
 }
+.iftm-gradient {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px !important;
+  background: rgb(11,82,0);
+  background: linear-gradient(180deg, rgba(11,82,0,1) 0%, rgba(20,121,9,1) 35%, rgba(5,175,40,1) 67%, rgba(37,190,79,1) 100%);
+}
+.iftm-container {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px !important;
+  background-image: url('../../assets/iftm-full.png');
+  background-size: cover;
+  border: 1px solid;
+  background-color: rgb(255 255 255 / 0%) !important;
+}
+
+.github-avatar {
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/github.png');
+  background-size: contain;
+}
+
+.linkedin-avatar {
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/linkedin.png');
+  background-size: contain;
+}
 
 .code-pattern {
   background: url('../../assets/codepattern.jpg') ;
@@ -22,8 +52,12 @@
 }
 
 @media screen and (max-width: 340px) {
-  .avatar-container {
+  .avatar-container, .iftm-gradient {
     width: 90%;
+    background-position: center;
+  }
+  .iftm-container {
+    width: 100%;
     background-position: center;
   }
 }
