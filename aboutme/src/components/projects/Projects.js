@@ -13,7 +13,7 @@ function Projects() {
 
   return (
     <div>
-      <Slide direction="down" in mountOnEnter unmountOnExit {...{ timeout: 850 }}>
+      <Slide direction="up" in mountOnEnter unmountOnExit {...{ timeout: 850 }}>
         <Paper sx={rootSx}>
           <Tabs
             value={value}

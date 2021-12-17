@@ -36,7 +36,7 @@ function Technologies() {
   }
 
   return (
-    <Slide direction="down" in mountOnEnter unmountOnExit {...{ timeout: 850 }}>
+    <Slide direction="right" in mountOnEnter unmountOnExit {...{ timeout: 850 }}>
       <Paper sx={rootSx}>
         <Typography sx={titleSx}>Tecnologias</Typography>
         <Divider sx={titleDividerSx} />

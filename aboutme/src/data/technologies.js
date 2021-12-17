@@ -46,6 +46,14 @@ const technologies = {
   git: {
     name: 'Git',
     image: 'git.png'
+  },
+  svn: {
+    name: 'SVN',
+    image: 'svn.png'
+  },
+  jira: {
+    name: 'Jira',
+    image: 'jira.png'
   }
 };
 
@@ -61,7 +69,8 @@ technologies.backend = [
 technologies.frontend = [
   technologies.vuejs,
   technologies.react,
-  technologies.angular
+  technologies.angular,
+  technologies.quasar
 ];
 
 technologies.mobile = [
@@ -69,7 +78,9 @@ technologies.mobile = [
 ];
 
 technologies.other = [
-  technologies.git
+  technologies.git,
+  technologies.svn,
+  technologies.jira
 ];
 
 export default technologies;
