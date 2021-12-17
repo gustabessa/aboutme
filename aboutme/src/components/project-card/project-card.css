@@ -8,7 +8,7 @@
   width: 100%;
 }
 /* @media screen and (max-width: 600px) { */
-  .image-center-sx {
-    text-align: -webkit-center;
-  }
+.image-center-sx {
+  text-align: -webkit-center;
+}
 /* } */
