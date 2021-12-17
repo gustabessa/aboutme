@@ -1,41 +1,40 @@
-import { Timeline, TimelineItem, TimelineSeparator,
-  TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
-import { Code, PointOfSale, Storefront } from '@mui/icons-material';
-import Typography from '@mui/material/Typography';
+import { Timeline } from '@mui/lab';
+import { useState } from 'react';
 import jobs from '../../data/jobs.js'
-
-function getJobIcon(jobType) {
-  switch (jobType) {
-    case 'DEV':
-      return (<Code />);
-    case 'REGISTER':
-      return (<PointOfSale />);
-    case 'SALES':
-      return (<Storefront />);
-    default: return <></>
-  }
-}
+import MyTimelineItem from './MyTimelineItem.js';
+import './my-timeline.css'
 
 function MyTimeline() {
+  const [expandedItem, setExpandedItem] = useState(null);
+
+  function handleAccordion(accordion) {
+    if (expandedItem === accordion) {
+      setExpandedItem(null);
+    } else {
+      setExpandedItem(accordion);
+    }
+  }
+
+  function getStyle(index) {
+    if (index === 0) {
+      return {paddingTop: '10px'}
+    } else if (index === jobs.length - 1) {
+      return {paddingBottom: '10px'}
+    }
+  }
+
   return(
-    <Timeline>
+    <Timeline sx={{ p: 0, m: 0 }}>     
       {
         jobs.map((job, index) => (
-          <TimelineItem key={index}>
-            <TimelineSeparator>
-              <TimelineConnector />
-                <TimelineDot color="primary">
-                  { getJobIcon(job.type) }
-                </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
-                { job.name }
-              </Typography>
-              <Typography>{ job.description }</Typography>
-            </TimelineContent>
-          </TimelineItem>
+          <MyTimelineItem 
+            key={index}
+            job={job}
+            style={getStyle(index)}
+            index={index}
+            expanded={index === expandedItem}
+            handleAccordion={handleAccordion}
+          />
         ))
       }
     </Timeline>

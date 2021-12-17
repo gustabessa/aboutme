@@ -14,5 +14,4 @@ const rootSx = {
   marginTop: '10px',
   marginBottom: '10px',
   padding: '10px',
-  color: 'white'
 }
