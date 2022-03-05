@@ -77,7 +77,7 @@ const projects = [
       technologiesData.postgres,
     ],
     disclaimer: {
-      text: 'O Bigdim pertence a empresa M-Du Tecnologia e possui todos os seus direitos reservados, acesse:',
+      text: 'O Bigdim pertence a empresa M-DU Tecnologia e possui todos os seus direitos reservados, acesse:',
       url: 'https://bigdim.com.br'
     }
   },
