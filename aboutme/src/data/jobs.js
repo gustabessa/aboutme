@@ -1,11 +1,19 @@
 const jobs = [
   {
     name: 'Desenvolvedor Fullstack',
+    description: 'Responsabilidades: \n•	Participei do desenvolvimento dos sistemas de barter de clientes externos.',
+    type: 'DEV',
+    company: 'Grão Direto',
+    start: 'Fevereiro de 2022',
+    end: ' - '
+  },
+  {
+    name: 'Desenvolvedor Fullstack',
     description: 'Responsabilidades: \n•	Implementei e mantive funcionalidades no Bigdim, o produto da empresa.\n•	Desenvolvi com a equipe um aplicativo em ReactNative, que as empresas clientes do Bigdim acessam para gerir os pedidos recebidos via delivery.\n•	Consumi APIs do Google Maps e MapBox para implementar cobrança de taxa de entrega por geolocalização (por distância em km).',
     type: 'DEV',
     company: 'M-DU Tecnologia',
     start: 'Agosto de 2020',
-    end: ' - '
+    end: 'Janeiro de 2022'
   },
   {
     name: 'Vendedor',

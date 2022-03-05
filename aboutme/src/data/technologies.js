@@ -3,6 +3,10 @@ const technologies = {
     name: 'Node.js',
     image: 'node.png'
   },
+  nest: {
+    name: 'Nest.js',
+    image: 'nestjs.png'
+  },
   java: {
     name: 'Java',
     image: 'java.png'
@@ -20,7 +24,7 @@ const technologies = {
     image: 'vue.png'
   },
   angular: {
-    name: 'Angular (4/5)',
+    name: 'Angular',
     image: 'angular.png'
   },
   react: {
@@ -54,6 +58,10 @@ const technologies = {
   jira: {
     name: 'Jira',
     image: 'jira.png'
+  },
+  typescript: {
+    name: 'Typescript',
+    image: 'typescript.png'
   }
 };
 
@@ -62,6 +70,7 @@ technologies.backend = [
   technologies.spring,
   technologies.springboot,
   technologies.node,
+  technologies.nest,
   technologies.sequelize,
   technologies.postgres
 ];
@@ -78,6 +87,7 @@ technologies.mobile = [
 ];
 
 technologies.other = [
+  technologies.typescript,
   technologies.git,
   technologies.svn,
   technologies.jira
