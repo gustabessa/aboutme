@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/aboutme/static/css/main.6830f84e.css",
+    "main.js": "/aboutme/static/js/main.88482f45.js",
+    "static/media/profilepic.jpg": "/aboutme/static/media/profilepic.c6c0b6886f6902ae9794.jpg",
+    "static/media/loja-delivery.jpg": "/aboutme/static/media/loja-delivery.cec5bac4457842a86335.jpg",
+    "static/media/codepattern-nobg.png": "/aboutme/static/media/codepattern-nobg.90833e01d5b12c2cb0ab.png",
+    "static/media/codepattern.jpg": "/aboutme/static/media/codepattern.304755ce6911fe8607f8.jpg",
+    "static/media/bessapdv2.jpg": "/aboutme/static/media/bessapdv2.e6af6e8e07d8d8e29ecf.jpg",
+    "static/media/bessapdv3.jpg": "/aboutme/static/media/bessapdv3.4229231ef08473c03cf9.jpg",
+    "static/media/bessapdv1.jpg": "/aboutme/static/media/bessapdv1.17acb9c122c3ea38a36c.jpg",
+    "static/media/git.png": "/aboutme/static/media/git.7e19ced30f7817541e65.png",
+    "static/media/appraise2.png": "/aboutme/static/media/appraise2.297f6a27b28cbff47b52.png",
+    "static/media/postgre.png": "/aboutme/static/media/postgre.a7fa39912c91e079e90b.png",
+    "static/media/java.png": "/aboutme/static/media/java.5d5cffa04d820ba0644c.png",
+    "static/media/vue.png": "/aboutme/static/media/vue.4626039760cedf966189.png",
+    "static/media/sequelize.png": "/aboutme/static/media/sequelize.844fb9182c0fbf41931d.png",
+    "static/media/reactnative.png": "/aboutme/static/media/reactnative.86c8d9eba03e29814d2a.png",
+    "static/media/spring.png": "/aboutme/static/media/spring.f546847d156bf54a1a87.png",
+    "static/media/appraise1.png": "/aboutme/static/media/appraise1.ee3e0ac6b693ff292daa.png",
+    "static/media/gestor-mobile.jpg": "/aboutme/static/media/gestor-mobile.4f4d43319750871d2cef.jpg",
+    "static/media/iftm-full.png": "/aboutme/static/media/iftm-full.609fad4cce984dc47993.png",
+    "static/media/node.png": "/aboutme/static/media/node.e328955d6bbbf3ebc72b.png",
+    "static/media/quasar.png": "/aboutme/static/media/quasar.eeba90b6077038ac6226.png",
+    "static/media/angular.png": "/aboutme/static/media/angular.fcff9f9bc24de9aee35f.png",
+    "static/media/react.png": "/aboutme/static/media/react.b37f0a4b7134b3c99d6e.png",
+    "static/media/jira.png": "/aboutme/static/media/jira.f73d91c6adf3ef463b67.png",
+    "static/media/github.png": "/aboutme/static/media/github.6c5d8675c0948005e707.png",
+    "static/media/svn.png": "/aboutme/static/media/svn.0984f3bb4dcbcdc61989.png",
+    "static/media/nestjs.png": "/aboutme/static/media/nestjs.d60c4c2d6bf973791d2a.png",
+    "index.html": "/aboutme/index.html",
+    "main.6830f84e.css.map": "/aboutme/static/css/main.6830f84e.css.map",
+    "main.88482f45.js.map": "/aboutme/static/js/main.88482f45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6830f84e.css",
+    "static/js/main.88482f45.js"
+  ]
+}
