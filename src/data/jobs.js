@@ -2,7 +2,7 @@ const jobs = [
   {
     name: "Desenvolvedor Fullstack",
     description:
-      "Responsabilidades: \n•	Participei do desenvolvimento dos sistemas de barter de clientes externos.\n•	Participei do desenvolvimento de plataformas web responsivas para a comercialização digital de grãos\n•	Desenvolvi uma funcionalidade de comunicação WhatsApp similar a um chatbot utilizando a ferramenta Twilio Studio Flow\n•	Atuei com desenvolvimento ágil utilizando o framework Scrum\n•	Tive contato com infraestrutura orientada a cloud com integração contínua (CI/CD) através do Github actions\n•	Liderei uma equipe com outros 4 desenvolvedores, representando-os em contatos com os stakeholders dos projetos e participando ativamente das tomadas de decisão sobre o desenvolvimento\n•	Ministrei iniciativas de educação interna e mentorias, sobre funcionamento e sintaxe dos frameworks que utilizamos, qualidade de código e testes unitários",
+      "Responsabilidades: \n•	Participei do desenvolvimento de plataformas web responsivas para a comercialização digital de grãos\n•	Desenvolvi uma funcionalidade de comunicação WhatsApp similar a um chatbot utilizando a ferramenta Twilio Studio Flow\n•	Atuei com desenvolvimento ágil utilizando o framework Scrum\n•	Tive contato com infraestrutura orientada a cloud com integração contínua (CI/CD) através do Github actions\n•	Liderei uma equipe com outros 4 desenvolvedores, representando-os em contatos com os stakeholders dos projetos e participando ativamente das tomadas de decisão sobre o desenvolvimento\n•	Ministrei iniciativas de educação interna e mentorias, sobre funcionamento e sintaxe dos frameworks que utilizamos, qualidade de código e testes unitários",
 
     type: "DEV",
     company: "Grão Direto",
